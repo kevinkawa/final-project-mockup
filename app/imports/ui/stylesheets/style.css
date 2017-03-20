@@ -1,0 +1,28 @@
+body {
+  padding-top: 75px; /* Move body of page below navbar. */
+}
+
+.ui.topmenu.menu {
+  background-color: #397983;
+  color: lightgoldenrodyellow;
+  box-shadow: none;
+  border: none;
+}
+
+.ui.middlemenu.menu {.
+  margin-top: 75px;
+  padding-top: 75px;
+  box-shadow: none;
+  border: none;
+}
+
+#login-buttons a, .accounts-dialog a {
+  color: lightgoldenrodyellow;
+}
+
+footer {
+  background-color: #397983;
+  color: lightgoldenrodyellow;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
