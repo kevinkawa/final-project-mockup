@@ -17,12 +17,20 @@ body {
 }
 
 #login-buttons a, .accounts-dialog a {
-  color: lightgoldenrodyellow;
+  color: darkblue;
 }
 
 footer {
   background-color: #397983;
   color: lightgoldenrodyellow;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  height: 175px;
 }
+
+/*
+.image2 {
+  position: absolute;
+  height: 100px;
+  width: 550px;
+  top: 200px;
+}
+*/

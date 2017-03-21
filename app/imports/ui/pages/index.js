@@ -8,3 +8,6 @@ import './home-page.html';
 
 import './list-stuff-page.html';
 import './list-stuff-page.js';
+
+import './user-profile-page.html';
+import './user-profile-page.js';
