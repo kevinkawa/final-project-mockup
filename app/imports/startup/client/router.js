@@ -15,6 +15,13 @@ FlowRouter.route('/list', {
   },
 });
 
+FlowRouter.route('/list-listings', {
+  name: 'List_Goods_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'List_Goods_Page' });
+  },
+});
+
 FlowRouter.route('/add', {
   name: 'Add_Stuff_Page',
   action() {
@@ -22,21 +29,35 @@ FlowRouter.route('/add', {
   },
 });
 
-FlowRouter.route('/stuff/:_id', {
+FlowRouter.route('/stuff/:id', {
   name: 'Edit_Stuff_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Edit_Stuff_Page' });
   },
 });
 
-FlowRouter.route('/student', {
+FlowRouter.route('/create-listing', {
+  name: 'Add_Good_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Add_Good_Page' });
+  },
+});
+
+FlowRouter.route('/edit-listing/:id', {
+  name: 'Edit_Good_Data_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Good_Data_Page' });
+  },
+});
+
+FlowRouter.route('/studentdata', {
   name: 'Create_Student_Data_Page',
   action() {
     BlazeLayout.render('App_Layout', { main: 'Create_Student_Data_Page' });
   },
 });
 
-FlowRouter.route('/studentdata/:_id', {
+FlowRouter.route('/studentdata/:id', {
   name: 'Edit_Student_Data_Page',
   action() {
     BlazeLayout.render('App_Layout', { main: 'Edit_Student_Data_Page' });

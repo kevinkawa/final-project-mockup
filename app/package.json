@@ -1,5 +1,5 @@
 {
-  "name": "projectFinal",
+  "name": "Final Project Mockup",
   "private": true,
   "scripts": {
     "start": "meteor --no-release-check --settings ../config/settings.development.json",
