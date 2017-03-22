@@ -1,33 +1,22 @@
 <template name="Header">
-  <div style="height: 75px; margin: 0px; border-radius: 0px" class="ui top fixed borderless inverted topmenu menu">
+  <div style="height: 75px" class="ui top fixed borderless inverted topmenu menu">
     <a class="ui container">
-      <a class="item" href="{{pathFor 'Home_Page'}}"><h1 style="color: lightgoldenrodyellow">Manoa Flea Market</h1></a>
+      <h1 style="color: lightgoldenrodyellow">Manoa Flea Market</h1>
+
+      <a class="{{ isActiveRoute 'List_Stuff_Page'}} item" href="{{ pathFor 'List_Stuff_Page' }}">Browse Listings</a>
 
       {{#if currentUser}}
         <a class="{{ isActiveRoute 'Add_Stuff_Page'}} item" href="{{ pathFor 'Add_Stuff_Page' }}">Add Stuff </a>
-        <a class="{{ isActiveRoute 'List_Stuff_Page'}} item" href="{{ pathFor 'List_Stuff_Page' }}">List Stuff</a>
 
-        <a class="right item"><i class="home icon"></i></a>
-        <a class="item"><i class="search icon"></i></a>
 
-        <a class="item" href="{{pathFor 'User_Profile_Page'}}">
+        <a class="right aligned item" href="{{pathFor 'Create_Student_Data_Page'}}">
           <div class="text">PROFILE</div>
           <i class="user icon"></i></a>
-
       {{/if}}
-
+      <a class="right fitted item" href="{{pathFor 'Home_Page'}}">
+        <div class="text">Home</div>
+        <i class="home icon"></i></a>
       <a href="#" class="right aligned item">{{> loginButtons align="right"}} </a>
-      <button class="ui button">
-        Help
-      </button>
     </a>
   </div>
-
-  <!--  <script>
-      $('.ui.dropdown')
-          .dropdown()
-      ;
-      $('.dropdown').dropdown({ transition: 'drop', on: 'hover' });
-    </script>
-    -->
 </template>

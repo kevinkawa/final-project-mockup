@@ -29,10 +29,17 @@ FlowRouter.route('/stuff/:_id', {
   },
 });
 
-FlowRouter.route('/user', {
-  name: 'User_Profile_Page',
+FlowRouter.route('/student', {
+  name: 'Create_Student_Data_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'User_Profile_Page' });
+    BlazeLayout.render('App_Layout', { main: 'Create_Student_Data_Page' });
+  },
+});
+
+FlowRouter.route('/studentdata/:_id', {
+  name: 'Edit_Student_Data_Page',
+  action() {
+    BlazeLayout.render('App_Layout', { main: 'Edit_Student_Data_Page' });
   },
 });
 

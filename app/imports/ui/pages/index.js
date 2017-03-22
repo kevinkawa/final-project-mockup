@@ -9,5 +9,10 @@ import './home-page.html';
 import './list-stuff-page.html';
 import './list-stuff-page.js';
 
-import './user-profile-page.html';
-import './user-profile-page.js';
+import './create-student-data-page.html';
+import './create-student-data-page.js';
+
+import './edit-student-data-page.html';
+import './edit-student-data-page.js';
+
+

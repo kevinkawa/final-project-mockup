@@ -10,3 +10,5 @@ Template.List_Stuff_Page.helpers({
     return Stuff.find();
   },
 });
+
+

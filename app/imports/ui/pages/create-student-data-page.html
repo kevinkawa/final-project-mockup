@@ -1,0 +1,25 @@
+<template name="Create_Student_Data_Page">
+
+  <div style="margin-top: 20px" class="ui container">
+
+    <form class="ui form student-data-form  {{ successClass }} {{ errorClass }}">
+      <h4 class="ui dividing header">Student Data</h4>
+
+      {{> Text_Form_Control label="IDnumber" required=true errorMessage=(fieldError "uhid")}}
+      {{> Text_Form_Control label="First" required=true errorMessage=(fieldError "first")}}
+      {{> Text_Form_Control label="Last" required=true errorMessage=(fieldError "last")}}
+      {{> Text_Form_Control label="Telephone" required=true errorMessage=(fieldError "telephone")}}
+      {{> Text_Form_Control label="Email" required=true errorMessage=(fieldError "email")}}
+      {{> Select_Form_Control label="Notifications" options=notifications errorMessage=(fieldError "notifications") multiple=true }}
+
+      <button class="ui primary button" type="submit">Submit</button>
+
+      {{#if displaySuccessMessage}}
+      <div class="ui success message">
+        <p>To update this entry, go to  <a href="/studentdata/{{ displaySuccessMessage }}">/studentdata/{{ displaySuccessMessage }}</a></p>
+      </div>
+      {{/if}}
+    </form>
+
+  </div>
+</template>

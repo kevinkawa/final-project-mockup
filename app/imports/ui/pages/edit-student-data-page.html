@@ -1,0 +1,26 @@
+<template name="Edit_Student_Data_Page">
+
+  {{#if Template.subscriptionsReady}}
+  <div style="margin-top: 20px" class="ui container">
+
+    <form class="ui form student-data-form {{ successClass }} {{ errorClass }}">
+      <h4 class="ui dividing header">Edit Student Data</h4>
+
+      {{> Text_Form_Control label="IDnumber" required=true errorMessage=(fieldError "uhid")}}
+      {{> Text_Form_Control label="First" required=true errorMessage=(fieldError "first")}}
+      {{> Text_Form_Control label="Last" required=true errorMessage=(fieldError "last")}}
+      {{> Text_Form_Control label="Telephone" required=true errorMessage=(fieldError "telephone")}}
+      {{> Text_Form_Control label="Email" required=true errorMessage=(fieldError "email")}}
+      {{> Select_Form_Control label="Notifications" options=notifications errorMessage=(fieldError "notifications") multiple=true }}
+
+      <button class="ui primary button" type="submit">Update</button>
+      {{#if displaySuccessMessage}}
+      <div class="ui success message">
+        <p>Student data successfully updated.</p>
+      </div>
+      {{/if}}
+    </form>
+
+  </div>
+  {{/if}}
+</template>

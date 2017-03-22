@@ -1,10 +1,11 @@
 import './app-body.html';
 import './app-body.js';
+import './app-layout.html';
 import './app-not-found.html';
 import './footer.html';
-import './footer.js';
 import './header.html';
 import './header.js';
+import './header-create.html';
 import './if-logged-in.html';
 import './if-logged-in.js';
 import './loading.html';
