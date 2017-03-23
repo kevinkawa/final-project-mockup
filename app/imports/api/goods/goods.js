@@ -29,8 +29,8 @@ export const GoodsSchema = new SimpleSchema({
     max: 200,
   },
   asking: {
-    label: 'Asking cost',
-    type: Number,
+    label: 'Asking',
+    type: String,
     optional: false,
     max: 200,
   },

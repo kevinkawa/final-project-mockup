@@ -59,7 +59,7 @@ Template.Edit_Student_Data_Page.events({
     // Get list of checked boxes
     // Multiple select list  (notifications)
     const selectedNotifications = _.filter(event.target.Notifications.selectedOptions, (option) => option.selected);
-    const notifications = _.map(selectedMajors, (option) => option.value);
+    const notifications = _.map(selectedNotifications, (option) => option.value);
 
     const updatedStudentData = { uhid, first, last, telephone, email, notifications };
 
@@ -71,7 +71,7 @@ Template.Edit_Student_Data_Page.events({
     instance.context.validate(updatedStudentData);
 
     if (instance.context.isValid()) {
-      const id = StudentData.update(FlowRouter.getParam('_id'), { $set: updatedStudentData });
+      id = StudentData.update(FlowRouter.getParam('_id'), { $set: updatedStudentData });
       instance.messageFlags.set(displaySuccessMessage, id);
       instance.messageFlags.set(displayErrorMessages, false);
     } else {

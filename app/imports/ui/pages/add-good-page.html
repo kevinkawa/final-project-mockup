@@ -1,10 +1,19 @@
 <template name="Add_Good_Page">
   <body class="Site">
   <main class="Site-content">>
-    Create a Listing
-    {{#If_Logged_In}}
+    <div style="margin-top: 20px" class="ui container">
 
-    {{/If_Logged_In}}
+      <form class="ui form student-data-form  {{ errorClass }}">
+        <h4 class="ui dividing header">Listing Data</h4>
+
+        {{> Radio_Form_Control label="Category" name="Category" required=true radios=categories errorMessage=(fieldError "category")}}
+        {{> Text_Form_Control label="Item" required=true errorMessage=(fieldError "item")}}
+        {{> Radio_Form_Control label="Condition" name="Condition" required=true radios=conditions errorMessage=(fieldError "condition")}}
+        {{> Select_Form_Control label="Asking" required=true options=asking errorMessage=(fieldError "asking") }}
+
+        <button class="ui primary button" type="submit">Submit</button>
+      </form>
+    </div>
   </main>
   </body>
 </template>

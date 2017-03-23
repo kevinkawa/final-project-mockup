@@ -16,6 +16,7 @@ import './list-stuff-page.html';
 import './list-stuff-page.js';
 
 import './list-goods-page.html';
+import './list-goods-page.js';
 
 import './create-student-data-page.html';
 import './create-student-data-page.js';
